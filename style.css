@@ -1,0 +1,48 @@
+body {
+  background-color: lightblue;
+}
+
+.weather-data {
+  --size: 50px;
+  min-width: 300px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: var(--size) 1fr;
+  grid-template-rows: var(--size) auto;
+
+  grid-template-areas:
+    "city city"
+    "img temp"
+    "feels feels"
+    "pres pres"
+    "hum hum";
+  
+  width: fit-content;
+  margin: 0 auto;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+.weather-data p {
+  margin: 0;
+}
+.weather-data .city {
+  grid-area: city;
+}
+.weather-data .icon {
+  grid-area: img;
+  align-self: center;
+}
+.weather-data .temp {
+  grid-area: temp;
+  font-size: var(--size);
+}
+.weather-data .feels-like {
+  grid-area: feels;
+}
+.weather-data .pressure {
+  grid-area: pres;
+}
+.weather-data .humidity {
+  grid-area: hum;
+}
